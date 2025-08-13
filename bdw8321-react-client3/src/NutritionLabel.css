@@ -1,0 +1,49 @@
+/* General container for the two tables */
+.nutrition-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 20px;
+}
+
+/* Individual nutrition label card */
+.nutrition-label {
+    flex: 0 0 45%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Table styles */
+.nutrition-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.nutrition-table td {
+    padding: 8px;
+}
+
+.nutrition-table .label {
+    font-weight: bold;
+    text-align: left;
+}
+
+.nutrition-table .value {
+    text-align: right;
+}
+
+
+.nutrition-table .over {
+    color: red !important;
+}
+
+.nutrition-table .close {
+    color: orange !important;
+}
+
+.nutrition-table .normal {
+    color: green !important;
+}

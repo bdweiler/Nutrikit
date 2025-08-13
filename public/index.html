@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Web Assignment 0</title>
+    <meta name="description" content="First web assignment">
+    <meta name="author" content="student name">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+        }
+    </style>
+    <script>
+        function updateDisplay() {
+            // Gets the selected option element
+            const selectedOption = document.getElementById('groups').selectedOptions[0];
+
+            // Use innerText to get the capitalized label text directly
+            const selectedGroup = selectedOption.innerText;
+
+            // Gets the selected color from the radio buttons
+            const colorButtons = document.getElementsByName('color');
+            let selectedColor = 'black'; // Default color
+
+            for (let button of colorButtons) {
+                if (button.checked) {
+                    selectedColor = button.value;
+                    break;
+                }
+            }
+
+            // Update the textarea with the selected group and color
+            const textArea = document.getElementById("color_display");
+            textArea.value = selectedGroup;
+            textArea.style.color = selectedColor;
+        }
+    </script>
+</head>
+
+<body>
+    <h1 style="font-family:Verdana; font-size: 36px;text-align: center;"><strong>SWEN-344 Web Assignment 0</strong></h1>
+    <h2 style="font-family:Impact; text-align: center;">Section 04</h2>
+
+
+    <div style="text-align: center;">
+        <select name="groups" id="groups" onchange="updateDisplay()">
+            <option value="blank"></option>
+            <option value="protein">Protein</option>
+            <option value="carbs">Carbs</option>
+            <option value="fruits">Fruits</option>
+            <option value="vegetables">Vegetables</option>
+            <option value="sweets">Sweets</option>
+        </select><br>
+    </div>
+
+
+    <div style="vertical-align: middle; margin-left: 46%;">
+        <input type="radio" id="black" value="Black" name="color" onclick="updateDisplay()">
+        <label for="black">Black</label><br>
+        <input type="radio" id="red" value="Red" name="color" onclick="updateDisplay()">
+        <label for="red">Red</label><br>
+        <input type="radio" id="green" value="Green" name="color" onclick="updateDisplay()">
+        <label for="green">Green</label><br>
+        <input type="radio" id="blue" value="Blue" name="color" onclick="updateDisplay()">
+        <label for="blue">Blue</label><br>
+        <input type="radio" id="purple" value="Purple" name="color" onclick="updateDisplay()">
+        <label for="purple">Purple</label><br>
+    </div>
+
+    <textarea id="color_display" name="color_display" rows="3" cols="30"
+        style="resize: none; display: block; margin-left: auto;margin-right: auto; font-size: 16px;">Food Type...
+    </textarea>
+
+</body>
+
+</html>

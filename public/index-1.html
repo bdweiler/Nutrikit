@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Web Assignment 1</title>
+    <link rel="stylesheet" href="styles-1.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <h1>NutriKit Food Planner</h1>
+    <h3>NutriKit allows you to select your groceries, and track your nutritional progress (good or bad)</h3>
+
+
+    <div class="controls">
+        <div class="control-group">
+            <label for="categories">Categories:</label>
+            <select id="categories" name="categories" onchange="populateMenuItems()">
+                <option value="">Select a category</option>
+                <option value="proteins">Proteins</option>
+                <option value="fruits">Fruits</option>
+                <option value="vegetables">Vegetables</option>
+                <option value="dairy">Dairy</option>
+                <option value="grains">Grains</option>
+            </select>
+        </div>
+
+        <div class="control-group">
+            <label for="food-list">Menu Items:</label>
+            <select id="food-list" size="5"></select>
+        </div>
+
+        <div class="buttons">
+            <button id="toggle-button" onclick="handleButtonClick()">&#62;&#62;</button>
+        </div>
+
+        <div class="control-group">
+            <label for="selection-list">Selected Items:</label>
+            <select id="selection-list" size="10"></select>
+        </div>
+    </div>
+
+    <div id="calories">
+        Total Calories: <span id="total-calories">0</span>
+    </div>
+
+
+
+</body>
+
+</html>
