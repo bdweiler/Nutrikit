@@ -1,7 +1,7 @@
 import os
 import psycopg2
 import yaml
-import urllib.parse as urlparse
+from urllib.parse import urlparse
 
 def connect():
     url = os.getenv('DATABASE_URL')  # Railway Postgres URL
