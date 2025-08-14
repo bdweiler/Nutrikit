@@ -17,6 +17,11 @@ app = Flask(__name__)
 CORS(app)
 api = Api(app)
 
+if os.path.exists('server'):
+    print(f"server directory contents: {os.listdir('server')}")
+else:
+    print("server directory not found in current working directory")
+
 print("=== ATTEMPTING IMPORTS ===")
 try:
     from api.swen_344_db_utils import *
